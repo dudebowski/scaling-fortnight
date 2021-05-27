@@ -21,6 +21,9 @@ public class ClientService implements  IClientService{
     @Override
     public ClientDTO GetClient(Long id) {
         ClientEntity entity =  repo.GetClientById(id);
+        if (entity==null) {
+            return null;
+        }
         return new ClientDTO(entity.getId(), entity.getName());
     }
 

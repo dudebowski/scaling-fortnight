@@ -23,16 +23,16 @@ public class Repository implements  IRepository {
         Long lastId = data.stream()
                 .map(totalMapper)
                 .reduce(0L, Long::max);
-        data.add(new ClientEntity(lastId++,name));
-        return lastId++;
+        data.add(new ClientEntity(++lastId,name));
+        return lastId;
     }
 
     private static List<ClientEntity> data = new ArrayList() {{
             add(new ClientEntity(44L, "Pietje Puk" ));
-            add(new ClientEntity(45L, "pietje puk" ));
-            add(new ClientEntity(46L, "pietje puk" ));
-            add(new ClientEntity(47L, "pietje puk" ));
-            add(new ClientEntity(48L, "pietje puk" ));
+            add(new ClientEntity(45L, "Bob de Bouwer" ));
+            add(new ClientEntity(46L, "Mini Mouse" ));
+            add(new ClientEntity(47L, "Vida Loca" ));
+            add(new ClientEntity(48L, "Kees Himself" ));
         }};
 
 
