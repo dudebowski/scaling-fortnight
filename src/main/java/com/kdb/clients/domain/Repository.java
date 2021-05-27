@@ -34,6 +34,4 @@ public class Repository implements  IRepository {
             add(new ClientEntity(47L, "Vida Loca" ));
             add(new ClientEntity(48L, "Kees Himself" ));
         }};
-
-
 }
